@@ -10,13 +10,13 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "Chefs")
-public class Chef {
+@Table(name = "Helpers")
+public class Helper {
 	
 	@Id
-    @Column(name = "Chef_ID")
+    @Column(name = "Helper_ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int chefID;
+    private int helperID;
 
     @NotNull
     @Size(max = 30)
@@ -36,12 +36,12 @@ public class Chef {
     @Column(name = "Phone_Number")
     private String phoneNumber;
 
-	public int getChefID() {
-		return chefID;
+	public int getHelperID() {
+		return helperID;
 	}
 
-	public void setChefID(int chefID) {
-		this.chefID = chefID;
+	public void setHelperID(int chefID) {
+		this.helperID = chefID;
 	}
 
 	public String getName() {
@@ -75,8 +75,5 @@ public class Chef {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-    
-    
-
 
 }
